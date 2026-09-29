@@ -4,13 +4,14 @@
 // Model + REST shape confirmed against the official Gemini API docs
 // (ai.google.dev/gemini-api/docs/models, ai.google.dev/api/generate-content):
 // generateContent remains fully supported and is used here for a single-turn
-// text response. Model: gemini-3.5-flash (temporarily downgraded from
-// gemini-3.8-flash after its free-tier daily quota was exhausted during
-// testing; quota is tracked separately per model, so 3.5-flash has its own
-// allowance. See the migration guide at ai.google.dev/gemini-api/docs/models
-// if switching back later.
+// text response. Model: gemini-3.5-flash-lite. Both gemini-3.8-flash and
+// gemini-3.5-flash hit their free-tier daily quota (20 requests/model/day)
+// during testing; quota is tracked separately per model, and 3.5-flash-lite
+// still had headroom, so this is a temporary fallback to keep testing
+// possible today. Switch back to gemini-3.8-flash once its daily quota
+// resets, since it responds faster and more reliably for this task.
 
-const GEMINI_MODEL = 'gemini-3.5-flash';
+const GEMINI_MODEL = 'gemini-3.5-flash-lite';
 const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 const MAX_CANDIDATES = 5;
 const REQUEST_TIMEOUT_MS = 25000;
