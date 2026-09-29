@@ -219,6 +219,57 @@
   }
   #applyBtn:hover { background: #4d6b51; }
 
+  /* ---------- AI recommend ---------- */
+  .ai-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px 32px;
+    margin-top: 20px;
+  }
+  .ai-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .ai-card-title {
+    margin: 0;
+    font-size: 16px;
+  }
+  #aiRecommendBtn {
+    border: none;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 0 20px;
+    height: 40px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  #aiRecommendBtn:hover { background: #4d6b51; }
+  #aiRecommendBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .ai-result-text {
+    margin: 16px 0 0;
+    padding: 14px 16px;
+    background: var(--accent-soft);
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #33402f;
+  }
+  .ai-result-text.is-message {
+    background: var(--bg-ivory);
+    color: var(--muted);
+  }
+
   /* ---------- Results ---------- */
   .results {
     max-width: 1160px;
@@ -316,6 +367,22 @@
   .card-favorite.active {
     color: #b5495b;
     border-color: #ecd3d7;
+  }
+  .card.ai-pick {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+  }
+  .ai-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    z-index: 2;
   }
   .card h3 {
     margin: 0 0 10px;
@@ -585,6 +652,14 @@
         </div>
       </div>
     </div>
+
+    <div class="ai-card">
+      <div class="ai-card-header">
+        <h3 class="ai-card-title">AI 추천</h3>
+        <button type="button" id="aiRecommendBtn">이 조건으로 추천받기</button>
+      </div>
+      <p id="aiResultText" class="ai-result-text" style="display:none"></p>
+    </div>
   </section>
 
   <main class="results">
@@ -714,11 +789,21 @@
       return parts.join(', ') + '.';
     }
 
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    let aiRecommendedUrl = null;
+
     function cardTemplate(item) {
       const isFavorite = favorites.has(item.detail_url);
+      const isAiPick = aiRecommendedUrl !== null && aiRecommendedUrl === item.detail_url;
       return `
-        <div class="card" data-url="${item.detail_url}">
+        <div class="card${isAiPick ? ' ai-pick' : ''}" data-url="${item.detail_url}">
           <span class="card-favorite${isFavorite ? ' active' : ''}" data-url="${item.detail_url}">${isFavorite ? '♥' : '♡'}</span>
+          ${isAiPick ? '<span class="ai-badge">AI 추천</span>' : ''}
           <h3>${item.name}</h3>
           <div class="price">₩${item.price.toLocaleString()}부터</div>
           <div class="price-note">${item.price_unit} 이용 기준</div>
@@ -1052,14 +1137,103 @@
       window.scrollTo(0, 0);
     }
 
+    function getUnitLabel(unit) {
+      if (unit === '1회') return '1회권';
+      if (unit === '월') return '정기권';
+      return '전체';
+    }
+
+    function showAiMessage(message) {
+      const resultEl = document.getElementById('aiResultText');
+      resultEl.className = 'ai-result-text is-message';
+      resultEl.textContent = message;
+      resultEl.style.display = 'block';
+    }
+
+    async function requestAiRecommendation() {
+      const btn = document.getElementById('aiRecommendBtn');
+      const resultEl = document.getElementById('aiResultText');
+
+      if (currentFiltered.length === 0) {
+        aiRecommendedUrl = null;
+        showAiMessage('조건에 맞는 요가 시설이 없습니다.');
+        return;
+      }
+
+      const budgetRaw = document.getElementById('budgetInput').value;
+      const budget = budgetRaw === '' ? null : Number(budgetRaw);
+
+      const top5 = currentFiltered
+        .slice()
+        .sort((a, b) => a.price - b.price)
+        .slice(0, 5)
+        .map(item => ({ name: item.name, price: item.price, rating: item.rating }));
+
+      btn.disabled = true;
+      btn.textContent = '고르는 중…';
+      resultEl.style.display = 'none';
+
+      try {
+        const res = await fetch('/api/recommend', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            conditions: { '이용 방식': getUnitLabel(selectedUnit), '내 예산(원)': budget },
+            candidates: top5,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok || !data.ok) {
+          aiRecommendedUrl = null;
+          if (data && (data.reason === 'invalid_name' || data.reason === 'parse_error')) {
+            showAiMessage('추천을 확인하지 못했습니다');
+          } else {
+            showAiMessage('잠시 뒤 다시 눌러 주세요');
+          }
+          renderCards();
+          return;
+        }
+
+        const matchedItem = currentFiltered.find(item => item.name === data.name)
+          || allItems.find(item => item.name === data.name);
+
+        if (!matchedItem) {
+          aiRecommendedUrl = null;
+          showAiMessage('추천을 확인하지 못했습니다');
+          renderCards();
+          return;
+        }
+
+        aiRecommendedUrl = matchedItem.detail_url;
+        resultEl.className = 'ai-result-text';
+        resultEl.innerHTML = `<strong>${escapeHtml(matchedItem.name)}</strong> 추천<br>${escapeHtml(data.reason).replace(/\n/g, '<br>')}`;
+        resultEl.style.display = 'block';
+        renderCards();
+      } catch (err) {
+        aiRecommendedUrl = null;
+        showAiMessage('잠시 뒤 다시 눌러 주세요');
+        renderCards();
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '이 조건으로 추천받기';
+      }
+    }
+
     async function main() {
       const grid = document.getElementById('grid');
       try {
         const res = await fetch('data/data.json');
         allItems = await res.json();
 
-        document.getElementById('applyBtn').addEventListener('click', applyFilters);
+        document.getElementById('applyBtn').addEventListener('click', () => {
+          aiRecommendedUrl = null;
+          document.getElementById('aiResultText').style.display = 'none';
+          applyFilters();
+        });
         document.getElementById('sortSelect').addEventListener('change', applyFilters);
+        document.getElementById('aiRecommendBtn').addEventListener('click', requestAiRecommendation);
 
         document.querySelectorAll('.unit-pill').forEach(btn => {
           btn.addEventListener('click', () => {
