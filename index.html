@@ -498,14 +498,12 @@
             <thead>
               <tr>
                 <th>정상가</th>
-                <th>실제 가격</th>
                 <th>이용 조건</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>${formatPrice(dp.default_price)}</td>
-                <td>${formatPrice(dp.dagym_price)}</td>
                 <td>${dp.entrance_policy ? `${formatPeriod(dp.entrance_policy.period, dp.entrance_policy.periodUnit)}당 ${dp.entrance_policy.limitCount}회` : '-'}</td>
               </tr>
             </tbody>

@@ -64,7 +64,7 @@
   },
   {
     "name": "군자 오엔 요가",
-    "price": 98958,
+    "price": 104166,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/66b0bf5901d0e4001dc7198c",
     "price_unit": "월",
@@ -241,7 +241,7 @@
   },
   {
     "name": "장안 채운요가스튜디오",
-    "price": 15200,
+    "price": 16000,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/61d50c4243554f0039f4bd1f",
     "price_unit": "1회",
@@ -304,7 +304,7 @@
   },
   {
     "name": "잠실나루 슬로우 벗 베럴 요가스튜디오",
-    "price": 27000,
+    "price": 30000,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/65e7ffa295b46a001da3ebc8",
     "price_unit": "1회",
@@ -449,7 +449,7 @@
   },
   {
     "name": "방이 이안요가",
-    "price": 9025,
+    "price": 9500,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/694e4da50f6d874cfc214e7f",
     "price_unit": "1회",
@@ -640,7 +640,7 @@
   },
   {
     "name": "역삼 무니요가",
-    "price": 16250,
+    "price": 35000,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/63ea00157077ec001d47b7d5",
     "price_unit": "1회",
@@ -740,7 +740,7 @@
   },
   {
     "name": "강남 아쉬탕가요가스튜디오",
-    "price": 121416,
+    "price": 136500,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/605b085443115b0039224e0a",
     "price_unit": "월",
@@ -841,7 +841,7 @@
   },
   {
     "name": "서초 샨티요가앤필라테스",
-    "price": 21500,
+    "price": 27000,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/663d88c7f09ceb001d69cdb8",
     "price_unit": "1회",
@@ -1001,7 +1001,7 @@
   },
   {
     "name": "흑석 요가블리스&필라테스",
-    "price": 5925,
+    "price": 6583,
     "rating": 4.8,
     "detail_url": "https://www.da-gym.co.kr/detail/59bb8e5940673b2aefb231d6",
     "price_unit": "1회",
@@ -1174,7 +1174,7 @@
   },
   {
     "name": "이수 라인요가",
-    "price": 63333,
+    "price": 77000,
     "rating": 4.5,
     "detail_url": "https://www.da-gym.co.kr/detail/6087bcc1c70b9e003994582b",
     "price_unit": "1회",
@@ -1315,7 +1315,7 @@
   },
   {
     "name": "상도 마니요가",
-    "price": 112500,
+    "price": 125000,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/6108ec46ec7d1e0039f41a60",
     "price_unit": "월",
@@ -1488,7 +1488,7 @@
   },
   {
     "name": "망원 제야딥요가",
-    "price": 8250,
+    "price": 9166,
     "rating": 4.7,
     "detail_url": "https://www.da-gym.co.kr/detail/5c05f6dbca8af30018cf0bed",
     "price_unit": "1회",
@@ -1701,7 +1701,7 @@
   },
   {
     "name": "당산 크레센도 요가필라테스",
-    "price": 29700,
+    "price": 33000,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/679253cd9039ef0edebfa85d",
     "price_unit": "1회",
@@ -1786,7 +1786,7 @@
   },
   {
     "name": "가산 AR centre",
-    "price": 13500,
+    "price": 13950,
     "rating": 5.0,
     "detail_url": "https://www.da-gym.co.kr/detail/64b8fa17d1e8c9001d62a170",
     "price_unit": "1회",
@@ -1841,7 +1841,7 @@
     "price": 2970,
     "rating": 4.9,
     "detail_url": "https://www.da-gym.co.kr/detail/5b3e1c234e46fc2ba88a329e",
-    "price_unit": "1회",
+    "price_unit": "월",
     "detail_pricing": {
       "operating_time_raw": "[평  일] 06:00 ~ 24:00\n[토요일] 12:00 ~ 20:00\n[일요일] 18:00 ~ 22:00\n[휴관일] 공휴일\n[기타] 공휴일 휴무",
       "membership_products": [
