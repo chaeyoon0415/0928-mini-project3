@@ -3,144 +3,2113 @@
     "name": "군자 시티짐",
     "price": 29250,
     "rating": 4.6,
-    "detail_url": "https://www.da-gym.co.kr/detail/6281fc049e2fcd001d9a0b64"
+    "detail_url": "https://www.da-gym.co.kr/detail/6281fc049e2fcd001d9a0b64",
+    "price_unit": "월",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 06:00 ~ 24:00\n[토요일] 09:00 ~ 20:00\n[일요일] 10:00 ~ 20:00\n[휴관일] 공휴일, 매달 마지막주 일요일",
+      "membership_products": [
+        {
+          "product_name": "GX(요가/그룹PT)+헬스 회원권",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 120000,
+              "dagym_price": 120000,
+              "monthly_price_calc": 120000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 280000,
+              "dagym_price": 280000,
+              "monthly_price_calc": 93333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 400000,
+              "dagym_price": 400000,
+              "monthly_price_calc": 66667
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 600000,
+              "dagym_price": 600000,
+              "monthly_price_calc": 50000
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "헬스",
+          "default_price": 20000,
+          "dagym_price": 16000,
+          "entrance_policy": {
+            "period": 24,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "군자 오엔 요가",
     "price": 98958,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/66b0bf5901d0e4001dc7198c"
+    "detail_url": "https://www.da-gym.co.kr/detail/66b0bf5901d0e4001dc7198c",
+    "price_unit": "월",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 06:50 ~ 22:30\n[휴관일] 매주 일요일, 매주 토요일\n[기타] 월요일~일요일 주 7일 수업 중입니다🙏",
+      "membership_products": [
+        {
+          "product_name": "회원권 (주2일)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 230000,
+              "dagym_price": 218500,
+              "monthly_price_calc": 218500
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 450000,
+              "dagym_price": 427500,
+              "monthly_price_calc": 142500
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 750000,
+              "dagym_price": 712500,
+              "monthly_price_calc": 118750
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1250000,
+              "dagym_price": 1187500,
+              "monthly_price_calc": 98958
+            }
+          ]
+        },
+        {
+          "product_name": "회원권 (주3일)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 260000,
+              "dagym_price": 247000,
+              "monthly_price_calc": 247000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 480000,
+              "dagym_price": 456000,
+              "monthly_price_calc": 152000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 810000,
+              "dagym_price": 769500,
+              "monthly_price_calc": 128250
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1350000,
+              "dagym_price": 1282500,
+              "monthly_price_calc": 106875
+            }
+          ]
+        },
+        {
+          "product_name": "회원권 (주4일)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 290000,
+              "dagym_price": 275500,
+              "monthly_price_calc": 275500
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 510000,
+              "dagym_price": 484500,
+              "monthly_price_calc": 161500
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 870000,
+              "dagym_price": 826500,
+              "monthly_price_calc": 137750
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1450000,
+              "dagym_price": 1377500,
+              "monthly_price_calc": 114792
+            }
+          ]
+        },
+        {
+          "product_name": "회원권 (주5일) ",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 320000,
+              "dagym_price": 304000,
+              "monthly_price_calc": 304000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 540000,
+              "dagym_price": 513000,
+              "monthly_price_calc": 171000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 930000,
+              "dagym_price": 883500,
+              "monthly_price_calc": 147250
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1550000,
+              "dagym_price": 1472500,
+              "monthly_price_calc": 122708
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "오엔요가 일일권(리뷰필수)",
+          "default_price": 30000,
+          "dagym_price": 10000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "장안 채운요가스튜디오",
     "price": 15200,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/61d50c4243554f0039f4bd1f"
+    "detail_url": "https://www.da-gym.co.kr/detail/61d50c4243554f0039f4bd1f",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 09:00 ~ 23:00\n[주  말] 10:00 ~ 15:00\n[휴관일] 공휴일",
+      "membership_products": [
+        {
+          "product_name": "요가&메디월 8:1 (통합권)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 2,
+              "period_unit": "month",
+              "count": 10,
+              "default_price": 200000,
+              "dagym_price": 190000,
+              "monthly_price_calc": 95000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 345000,
+              "dagym_price": 327750,
+              "monthly_price_calc": 109250
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 30,
+              "default_price": 570000,
+              "dagym_price": 541500,
+              "monthly_price_calc": 180500
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 50,
+              "default_price": 800000,
+              "dagym_price": 760000,
+              "monthly_price_calc": 126667
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "그룹요가 1회 체험",
+          "default_price": 30000,
+          "dagym_price": 27000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "잠실나루 슬로우 벗 베럴 요가스튜디오",
     "price": 27000,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/65e7ffa295b46a001da3ebc8"
+    "detail_url": "https://www.da-gym.co.kr/detail/65e7ffa295b46a001da3ebc8",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 09:30 ~ 22:10\n[휴관일] 매주 일요일",
+      "membership_products": [
+        {
+          "product_name": "산전요가",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 4,
+              "default_price": 130000,
+              "dagym_price": 123500,
+              "monthly_price_calc": 123500
+            },
+            {
+              "period": 2,
+              "period_unit": "month",
+              "count": 10,
+              "default_price": 300000,
+              "dagym_price": 270000,
+              "monthly_price_calc": 135000
+            }
+          ]
+        }
+      ],
+      "daily_products": [],
+      "schedule_raw": []
+    }
   },
   {
     "name": "회기 류아필라테스",
     "price": 12000,
     "rating": 4.8,
-    "detail_url": "https://www.da-gym.co.kr/detail/59e8c4ae7791e950c328d727"
+    "detail_url": "https://www.da-gym.co.kr/detail/59e8c4ae7791e950c328d727",
+    "price_unit": "1회"
   },
   {
     "name": "상봉 바디톡휘트니스",
     "price": 5500,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/6412cd4249f860001d0def07"
+    "detail_url": "https://www.da-gym.co.kr/detail/6412cd4249f860001d0def07",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[월요일] 06:00 ~ 24:00\n[화요일] 00:00 ~ 24:00\n[수요일] 00:00 ~ 24:00\n[목요일] 00:00 ~ 24:00\n[금요일] 00:00 ~ 24:00\n[토요일] 00:00 ~ 19:00\n[일요일] 10:00 ~ 19:00\n[공휴일] 10:00 ~ 19:00\n[기타] -월요일 오전 6시~토요일 오후 7시 운영입니다.\n-명절에 휴무입니다.",
+      "membership_products": [
+        {
+          "product_name": "요가(+헬스무료) 회원권",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 154000,
+              "dagym_price": 120000,
+              "monthly_price_calc": 120000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 231000,
+              "dagym_price": 180000,
+              "monthly_price_calc": 60000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 286000,
+              "dagym_price": 240000,
+              "monthly_price_calc": 40000
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 440000,
+              "dagym_price": 360000,
+              "monthly_price_calc": 30000
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "요가/점핑/댄스(선택1)",
+          "default_price": 20000,
+          "dagym_price": 15000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "명일 아쉬탕가요가스튜디오",
     "price": 17500,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/605b07bd43115b0039224e08"
+    "detail_url": "https://www.da-gym.co.kr/detail/605b07bd43115b0039224e08",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 06:30 ~ 22:00\n[토요일] 08:30 ~ 10:30\n[일요일] 휴무\n[휴관일] 공휴일",
+      "membership_products": [
+        {
+          "product_name": "주 2회",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 420000,
+              "dagym_price": 420000,
+              "monthly_price_calc": 140000
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "요가 그룹수업",
+          "default_price": 30000,
+          "dagym_price": 19900,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "방이 이안요가",
     "price": 9025,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/694e4da50f6d874cfc214e7f"
+    "detail_url": "https://www.da-gym.co.kr/detail/694e4da50f6d874cfc214e7f",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[월요일] 09:40 ~ 22:10\n[화요일] 09:40 ~ 22:10\n[수요일] 09:40 ~ 22:10\n[목요일] 08:30 ~ 22:10\n[금요일] 09:40 ~ 21:00\n[토요일] 09:40 ~ 12:00\n[일요일] 09:40 ~ 12:30\n[공휴일] 11:00 ~ 21:00",
+      "membership_products": [
+        {
+          "product_name": "그룹 요가 (주2회)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 160000,
+              "dagym_price": 152000,
+              "monthly_price_calc": 152000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 456000,
+              "dagym_price": 433200,
+              "monthly_price_calc": 144400
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 48,
+              "default_price": 864000,
+              "dagym_price": 777600,
+              "monthly_price_calc": 129600
+            }
+          ]
+        },
+        {
+          "product_name": "그룹 요가 (주3회)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 205000,
+              "dagym_price": 194750,
+              "monthly_price_calc": 194750
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 36,
+              "default_price": 584000,
+              "dagym_price": 554800,
+              "monthly_price_calc": 184933
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 72,
+              "default_price": 1107000,
+              "dagym_price": 996300,
+              "monthly_price_calc": 166050
+            }
+          ]
+        },
+        {
+          "product_name": "그룹 요가 (주5회)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 260000,
+              "dagym_price": 247000,
+              "monthly_price_calc": 247000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 60,
+              "default_price": 740000,
+              "dagym_price": 703000,
+              "monthly_price_calc": 234333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 120,
+              "default_price": 1404000,
+              "dagym_price": 1263600,
+              "monthly_price_calc": 210600
+            }
+          ]
+        },
+        {
+          "product_name": "그룹 요가 (주7회)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 28,
+              "default_price": 320000,
+              "dagym_price": 304000,
+              "monthly_price_calc": 304000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 84,
+              "default_price": 910000,
+              "dagym_price": 864500,
+              "monthly_price_calc": 288167
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 168,
+              "default_price": 1728000,
+              "dagym_price": 1555200,
+              "monthly_price_calc": 259200
+            }
+          ]
+        },
+        {
+          "product_name": "그룹 요가 횟수제",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 2,
+              "period_unit": "month",
+              "count": 10,
+              "default_price": 260000,
+              "dagym_price": 247000,
+              "monthly_price_calc": 123500
+            },
+            {
+              "period": 4,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 455000,
+              "dagym_price": 409500,
+              "monthly_price_calc": 102375
+            }
+          ]
+        },
+        {
+          "product_name": "런치타임 50%할인 (12:05~12:50)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 228000,
+              "dagym_price": 216600,
+              "monthly_price_calc": 72200
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "첫 체험 수련",
+          "default_price": 16500,
+          "dagym_price": 14850,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        },
+        {
+          "product_name": "원데이",
+          "default_price": 33000,
+          "dagym_price": 29700,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 0
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "역삼 무니요가",
     "price": 16250,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/63ea00157077ec001d47b7d5"
+    "detail_url": "https://www.da-gym.co.kr/detail/63ea00157077ec001d47b7d5",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[월요일] 12:00 ~ 21:00\n[화요일] 08:00 ~ 22:00\n[수요일] 12:00 ~ 21:00\n[목요일] 08:00 ~ 22:00\n[금요일] 12:00 ~ 20:00\n[토요일] 11:30 ~ 12:30\n[일요일] 휴무\n[휴관일] 공휴일, 매주 일요일\n[기타] 프라이빗 레슨 (개인, 커플, 소그룹)은 운영 시간 외에도 진행됩니다:)",
+      "membership_products": [
+        {
+          "product_name": "(🔥특가) 오전에만 하고 싶어요!",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 4,
+              "period_unit": "week",
+              "count": 4,
+              "default_price": 140000,
+              "dagym_price": 80000
+            },
+            {
+              "period": 8,
+              "period_unit": "week",
+              "count": 8,
+              "default_price": 280000,
+              "dagym_price": 130000
+            }
+          ]
+        },
+        {
+          "product_name": "참여 일정이 일정하지 않아요! (총 4/8회)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 4,
+              "default_price": 140000,
+              "dagym_price": 126000,
+              "monthly_price_calc": 126000
+            },
+            {
+              "period": 2,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 280000,
+              "dagym_price": 252000,
+              "monthly_price_calc": 126000
+            }
+          ]
+        },
+        {
+          "product_name": "정기적으로 요가 할 수 있어요! (주 2회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 12,
+              "period_unit": "week",
+              "count": 24,
+              "default_price": 627000,
+              "dagym_price": 595650
+            },
+            {
+              "period": 24,
+              "period_unit": "week",
+              "count": 48,
+              "default_price": 1155000,
+              "dagym_price": 1097250
+            }
+          ]
+        },
+        {
+          "product_name": "[🔥이벤트] 2주 무제한 수강권",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 2,
+              "period_unit": "week",
+              "count": null,
+              "default_price": 300000,
+              "dagym_price": 99000
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "🔥신년 특가 체험권 (리뷰 시 1+1 이벤트)",
+          "default_price": 35000,
+          "dagym_price": 31500,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "강남 아쉬탕가요가스튜디오",
     "price": 121416,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/605b085443115b0039224e0a"
+    "detail_url": "https://www.da-gym.co.kr/detail/605b085443115b0039224e0a",
+    "price_unit": "월",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 09:00 ~ 22:00\n[토요일] 09:30 ~ 12:00\n[일요일] 휴무\n[휴관일] 공휴일, 매주 일요일",
+      "membership_products": [
+        {
+          "product_name": "아쉬탕가 요가 & 빈야사 요가 (주 4회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 195000,
+              "dagym_price": 195000,
+              "monthly_price_calc": 195000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 497000,
+              "dagym_price": 442000,
+              "monthly_price_calc": 147333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 877000,
+              "dagym_price": 780000,
+              "monthly_price_calc": 130000
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1638000,
+              "dagym_price": 1457000,
+              "monthly_price_calc": 121417
+            }
+          ]
+        },
+        {
+          "product_name": "아쉬탕가 요가 & 빈야사 요가 (주6회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 245000,
+              "dagym_price": 245000,
+              "monthly_price_calc": 245000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 625000,
+              "dagym_price": 556000,
+              "monthly_price_calc": 185333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1102000,
+              "dagym_price": 980000,
+              "monthly_price_calc": 163333
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 2058000,
+              "dagym_price": 1831000,
+              "monthly_price_calc": 152583
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "요가 그룹수업",
+          "default_price": 29900,
+          "dagym_price": 29900,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "서초 샨티요가앤필라테스",
     "price": 21500,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/663d88c7f09ceb001d69cdb8"
+    "detail_url": "https://www.da-gym.co.kr/detail/663d88c7f09ceb001d69cdb8",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 10:00 ~ 22:10\n[토요일] 11:00 ~ 12:00\n[일요일] 00:00 ~ 23:59\n[휴관일] 공휴일",
+      "membership_products": [
+        {
+          "product_name": "체형교정 요가 & 테라피월",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 5,
+              "default_price": 150000,
+              "dagym_price": 150000,
+              "monthly_price_calc": 150000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 10,
+              "default_price": 270000,
+              "dagym_price": 270000,
+              "monthly_price_calc": 90000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 540000,
+              "dagym_price": 540000,
+              "monthly_price_calc": 90000
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": 40,
+              "default_price": 1080000,
+              "dagym_price": 860000,
+              "monthly_price_calc": 71667
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "요가 1회",
+          "default_price": 35000,
+          "dagym_price": 35000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "서초 하루고요 요가&명상",
     "price": 32500,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/65f152462236b9001d3a906e"
+    "detail_url": "https://www.da-gym.co.kr/detail/65f152462236b9001d3a906e",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 07:00 ~ 22:00\n[주  말] 09:40 ~ 12:00\n[휴관일] 공휴일",
+      "membership_products": [
+        {
+          "product_name": "횟수권",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 390000,
+              "dagym_price": 390000,
+              "monthly_price_calc": 130000
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "1회권",
+          "default_price": 35000,
+          "dagym_price": 35000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 0
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "시청 요가타운 서소문교육원",
     "price": 112750,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/62c3eefd99269f001d846287"
+    "detail_url": "https://www.da-gym.co.kr/detail/62c3eefd99269f001d846287",
+    "price_unit": "월",
+    "detail_pricing": {
+      "operating_time_raw": "[월요일] 07:30 ~ 20:10\n[화요일] 11:25 ~ 20:10\n[수요일] 07:30 ~ 20:10\n[목요일] 11:25 ~ 20:10\n[금요일] 07:30 ~ 20:10\n[공휴일] 07:30 ~ 20:10\n[휴관일] 매주 일요일, 매주 토요일",
+      "membership_products": [
+        {
+          "product_name": "주3회 4개월",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 242000,
+              "dagym_price": 242000,
+              "monthly_price_calc": 242000
+            },
+            {
+              "period": 4,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 484000,
+              "dagym_price": 484000,
+              "monthly_price_calc": 121000
+            }
+          ]
+        },
+        {
+          "product_name": "요가 (주 2회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 225500,
+              "dagym_price": 225500,
+              "monthly_price_calc": 225500
+            },
+            {
+              "period": 4,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 451000,
+              "dagym_price": 451000,
+              "monthly_price_calc": 112750
+            }
+          ]
+        }
+      ],
+      "daily_products": [],
+      "schedule_raw": []
+    }
   },
   {
     "name": "흑석 요가블리스&필라테스",
     "price": 5925,
     "rating": 4.8,
-    "detail_url": "https://www.da-gym.co.kr/detail/59bb8e5940673b2aefb231d6"
+    "detail_url": "https://www.da-gym.co.kr/detail/59bb8e5940673b2aefb231d6",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 08:00 ~ 23:00\n[주  말] 08:00 ~ 22:00\n[공휴일] 08:00 ~ 22:00",
+      "membership_products": [
+        {
+          "product_name": "요가",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 4,
+              "default_price": 100000,
+              "dagym_price": 100000,
+              "monthly_price_calc": 100000
+            },
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 120000,
+              "dagym_price": 120000,
+              "monthly_price_calc": 120000
+            },
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 150000,
+              "dagym_price": 142500,
+              "monthly_price_calc": 142500
+            },
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 180000,
+              "dagym_price": 180000,
+              "monthly_price_calc": 180000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 270000,
+              "dagym_price": 256500,
+              "monthly_price_calc": 85500
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 330000,
+              "dagym_price": 297000,
+              "monthly_price_calc": 99000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 36,
+              "default_price": 400000,
+              "dagym_price": 360000,
+              "monthly_price_calc": 120000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 48,
+              "default_price": 550000,
+              "dagym_price": 495000,
+              "monthly_price_calc": 82500
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 70,
+              "default_price": 680000,
+              "dagym_price": 612000,
+              "monthly_price_calc": 102000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 95,
+              "default_price": 740000,
+              "dagym_price": 666000,
+              "monthly_price_calc": 111000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 120,
+              "default_price": 790000,
+              "dagym_price": 711000,
+              "monthly_price_calc": 118500
+            }
+          ]
+        },
+        {
+          "product_name": "성인 플라잉 요가",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 4,
+              "default_price": 120000,
+              "dagym_price": 120000,
+              "monthly_price_calc": 120000
+            },
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 180000,
+              "dagym_price": 180000,
+              "monthly_price_calc": 180000
+            },
+            {
+              "period": 2,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 230000,
+              "dagym_price": 218500,
+              "monthly_price_calc": 109250
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 330000,
+              "dagym_price": 330000,
+              "monthly_price_calc": 110000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 480000,
+              "dagym_price": 456000,
+              "monthly_price_calc": 152000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 48,
+              "default_price": 770000,
+              "dagym_price": 770000,
+              "monthly_price_calc": 128333
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "일일체험권 (요가)",
+          "default_price": 25000,
+          "dagym_price": 22500,
+          "entrance_policy": {
+            "period": 50,
+            "periodUnit": "minute",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "이수 라인요가",
     "price": 63333,
     "rating": 4.5,
-    "detail_url": "https://www.da-gym.co.kr/detail/6087bcc1c70b9e003994582b"
+    "detail_url": "https://www.da-gym.co.kr/detail/6087bcc1c70b9e003994582b",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 06:30 ~ 23:00\n[휴관일] 매주 일요일",
+      "membership_products": [
+        {
+          "product_name": "재활 PT 수업",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 2,
+              "period_unit": "month",
+              "count": 10,
+              "default_price": 770000,
+              "dagym_price": 658000,
+              "monthly_price_calc": 329000
+            },
+            {
+              "period": 5,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 1540000,
+              "dagym_price": 1300000,
+              "monthly_price_calc": 260000
+            },
+            {
+              "period": 8,
+              "period_unit": "month",
+              "count": 30,
+              "default_price": 2310000,
+              "dagym_price": 1900000,
+              "monthly_price_calc": 237500
+            }
+          ]
+        },
+        {
+          "product_name": "프리미엄(종합반 주3회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 180000,
+              "dagym_price": 153000,
+              "monthly_price_calc": 153000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 450000,
+              "dagym_price": 412000,
+              "monthly_price_calc": 137333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 690000,
+              "dagym_price": 621000,
+              "monthly_price_calc": 103500
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1240000,
+              "dagym_price": 989000,
+              "monthly_price_calc": 82417
+            }
+          ]
+        },
+        {
+          "product_name": "프리미엄(종합반 주5회 매일반)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 200000,
+              "dagym_price": 170000,
+              "monthly_price_calc": 170000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 490000,
+              "dagym_price": 441000,
+              "monthly_price_calc": 147000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 750000,
+              "dagym_price": 658000,
+              "monthly_price_calc": 109667
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1360000,
+              "dagym_price": 1080000,
+              "monthly_price_calc": 90000
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "1회 쿠폰 일일권",
+          "default_price": 25000,
+          "dagym_price": 20000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        },
+        {
+          "product_name": "3회 쿠폰 일일권",
+          "default_price": 70000,
+          "dagym_price": 49000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "상도 마니요가",
     "price": 112500,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/6108ec46ec7d1e0039f41a60"
+    "detail_url": "https://www.da-gym.co.kr/detail/6108ec46ec7d1e0039f41a60",
+    "price_unit": "월",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 10:00 ~ 22:00\n[휴관일] 매주 일요일",
+      "membership_products": [
+        {
+          "product_name": "일반 요가 무제한",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 25,
+              "default_price": 210000,
+              "dagym_price": 189000,
+              "monthly_price_calc": 189000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 60,
+              "default_price": 530000,
+              "dagym_price": 477000,
+              "monthly_price_calc": 159000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 180,
+              "default_price": 950000,
+              "dagym_price": 855000,
+              "monthly_price_calc": 142500
+            }
+          ]
+        },
+        {
+          "product_name": "일반 요가 주 3회",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 180000,
+              "dagym_price": 162000,
+              "monthly_price_calc": 162000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 36,
+              "default_price": 480000,
+              "dagym_price": 460000,
+              "monthly_price_calc": 153333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 72,
+              "default_price": 800000,
+              "dagym_price": 720000,
+              "monthly_price_calc": 120000
+            }
+          ]
+        },
+        {
+          "product_name": " 일반 요가 주 2회",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 160000,
+              "dagym_price": 144000,
+              "monthly_price_calc": 144000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 430000,
+              "dagym_price": 387000,
+              "monthly_price_calc": 129000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 48,
+              "default_price": 750000,
+              "dagym_price": 675000,
+              "monthly_price_calc": 112500
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "1회 이용권",
+          "default_price": 35000,
+          "dagym_price": 31500,
+          "entrance_policy": {
+            "period": 4,
+            "periodUnit": "hour",
+            "limitCount": 0
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "불광 플라잉요가인",
     "price": 16250,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/63624b95f2c292001ddd9332"
+    "detail_url": "https://www.da-gym.co.kr/detail/63624b95f2c292001ddd9332",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 24시간 운영\n[토요일] 10:00 ~ 13:00\n[일요일] 휴무\n[휴관일] 공휴일",
+      "membership_products": [
+        {
+          "product_name": "키즈플라잉",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 4,
+              "default_price": 100000,
+              "dagym_price": 90000,
+              "monthly_price_calc": 90000
+            },
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 9,
+              "default_price": 200000,
+              "dagym_price": 180000,
+              "monthly_price_calc": 180000
+            }
+          ]
+        },
+        {
+          "product_name": "플라잉 요가 (주 2회)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 170000,
+              "dagym_price": 170000,
+              "monthly_price_calc": 170000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 390000,
+              "dagym_price": 390000,
+              "monthly_price_calc": 130000
+            }
+          ]
+        }
+      ],
+      "daily_products": [],
+      "schedule_raw": []
+    }
   },
   {
     "name": "망원 제야딥요가",
     "price": 8250,
     "rating": 4.7,
-    "detail_url": "https://www.da-gym.co.kr/detail/5c05f6dbca8af30018cf0bed"
+    "detail_url": "https://www.da-gym.co.kr/detail/5c05f6dbca8af30018cf0bed",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 07:00 ~ 22:00\n[휴관일] 공휴일, 주말",
+      "membership_products": [
+        {
+          "product_name": "요가(주2회)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 180000,
+              "dagym_price": 162000,
+              "monthly_price_calc": 162000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 396000,
+              "dagym_price": 356400,
+              "monthly_price_calc": 118800
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 48,
+              "default_price": 616000,
+              "dagym_price": 554400,
+              "monthly_price_calc": 92400
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": 96,
+              "default_price": 1067000,
+              "dagym_price": 960300,
+              "monthly_price_calc": 80025
+            }
+          ]
+        },
+        {
+          "product_name": "요가 (주 3회)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 200000,
+              "dagym_price": 180000,
+              "monthly_price_calc": 180000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 36,
+              "default_price": 439000,
+              "dagym_price": 395100,
+              "monthly_price_calc": 131700
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 72,
+              "default_price": 780000,
+              "dagym_price": 702000,
+              "monthly_price_calc": 117000
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": 144,
+              "default_price": 1320000,
+              "dagym_price": 1188000,
+              "monthly_price_calc": 99000
+            }
+          ]
+        },
+        {
+          "product_name": "요가 (무제한)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 300000,
+              "dagym_price": 270000,
+              "monthly_price_calc": 270000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 648000,
+              "dagym_price": 583200,
+              "monthly_price_calc": 194400
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1089000,
+              "dagym_price": 980100,
+              "monthly_price_calc": 163350
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 1936000,
+              "dagym_price": 1742400,
+              "monthly_price_calc": 145200
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "일일권(1회구매가능)",
+          "default_price": 33000,
+          "dagym_price": 3000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "신림 요가룩스앤필라테스",
     "price": 101666,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/6139d2cd6bdf97003909c62f"
+    "detail_url": "https://www.da-gym.co.kr/detail/6139d2cd6bdf97003909c62f",
+    "price_unit": "월",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 07:00 ~ 22:00",
+      "membership_products": [
+        {
+          "product_name": "플라잉요가&요가&매트필라테스(주2회)/그룹수업",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 200000,
+              "dagym_price": 200000,
+              "monthly_price_calc": 200000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 430000,
+              "dagym_price": 430000,
+              "monthly_price_calc": 143333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 48,
+              "default_price": 740000,
+              "dagym_price": 740000,
+              "monthly_price_calc": 123333
+            }
+          ]
+        },
+        {
+          "product_name": "요가 & 매트 필라테스(주2회)/그룹수업",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 160000,
+              "dagym_price": 160000,
+              "monthly_price_calc": 160000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 370000,
+              "dagym_price": 370000,
+              "monthly_price_calc": 123333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 48,
+              "default_price": 610000,
+              "dagym_price": 610000,
+              "monthly_price_calc": 101667
+            }
+          ]
+        }
+      ],
+      "daily_products": [],
+      "schedule_raw": []
+    }
   },
   {
     "name": "당산 크레센도 요가필라테스",
     "price": 29700,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/679253cd9039ef0edebfa85d"
+    "detail_url": "https://www.da-gym.co.kr/detail/679253cd9039ef0edebfa85d",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 10:30 ~ 22:00\n[토요일] 10:00 ~ 13:00\n[일요일] 휴무\n[휴관일] 공휴일, 매주 일요일\n[기타] 일요일은 휴강입니다. ",
+      "membership_products": [
+        {
+          "product_name": "4:1 필라테스[매트+기구] 월4회권",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 4,
+              "default_price": 145000,
+              "dagym_price": 145000,
+              "monthly_price_calc": 145000
+            },
+            {
+              "period": 2,
+              "period_unit": "month",
+              "count": 8,
+              "default_price": 284000,
+              "dagym_price": 284000,
+              "monthly_price_calc": 142000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 436000,
+              "dagym_price": 436000,
+              "monthly_price_calc": 145333
+            }
+          ]
+        },
+        {
+          "product_name": "4:1 필라테스[매트+기구] 10회권",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 5,
+              "period_unit": "week",
+              "count": 10,
+              "default_price": 330000,
+              "dagym_price": 297000
+            },
+            {
+              "period": 10,
+              "period_unit": "week",
+              "count": 20,
+              "default_price": 660000,
+              "dagym_price": 660000
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "1:1재활교정PT",
+          "default_price": 110000,
+          "dagym_price": 99000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        },
+        {
+          "product_name": "4:1 필라테스[매트+기구] 1회권",
+          "default_price": 30000,
+          "dagym_price": 27000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "가산 AR centre",
     "price": 13500,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/64b8fa17d1e8c9001d62a170"
+    "detail_url": "https://www.da-gym.co.kr/detail/64b8fa17d1e8c9001d62a170",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 07:00 ~ 23:00\n[주  말] 11:00 ~ 17:00\n[공휴일] 11:00 ~ 17:00",
+      "membership_products": [
+        {
+          "product_name": "그룹수업 (스쿼시+요가+필라테스)",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 2,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 265000,
+              "dagym_price": 260000,
+              "monthly_price_calc": 130000
+            },
+            {
+              "period": 4,
+              "period_unit": "month",
+              "count": 24,
+              "default_price": 445000,
+              "dagym_price": 440000,
+              "monthly_price_calc": 110000
+            },
+            {
+              "period": 8,
+              "period_unit": "month",
+              "count": 48,
+              "default_price": 745000,
+              "dagym_price": 730000,
+              "monthly_price_calc": 91250
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": 100,
+              "default_price": 1395000,
+              "dagym_price": 1350000,
+              "monthly_price_calc": 112500
+            }
+          ]
+        }
+      ],
+      "daily_products": [],
+      "schedule_raw": []
+    }
   },
   {
     "name": "고척 빡샘스피닝클럽",
     "price": 2970,
     "rating": 4.9,
-    "detail_url": "https://www.da-gym.co.kr/detail/5b3e1c234e46fc2ba88a329e"
+    "detail_url": "https://www.da-gym.co.kr/detail/5b3e1c234e46fc2ba88a329e",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 06:00 ~ 24:00\n[토요일] 12:00 ~ 20:00\n[일요일] 18:00 ~ 22:00\n[휴관일] 공휴일\n[기타] 공휴일 휴무",
+      "membership_products": [
+        {
+          "product_name": "🔥선착순🔥요가(+헬스) 회원권",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 120000,
+              "dagym_price": 120000,
+              "monthly_price_calc": 120000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 260000,
+              "dagym_price": 249000,
+              "monthly_price_calc": 83000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": null,
+              "default_price": 500000,
+              "dagym_price": 479000,
+              "monthly_price_calc": 79833
+            }
+          ]
+        }
+      ],
+      "daily_products": [],
+      "schedule_raw": []
+    }
   },
   {
     "name": "우장산 스타일핫요가&기구필라테스",
     "price": 52500,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/5accd3ffbf33746e01ecc3f0"
+    "detail_url": "https://www.da-gym.co.kr/detail/5accd3ffbf33746e01ecc3f0",
+    "price_unit": "월",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 09:00 ~ 23:00\n[토요일] 10:00 ~ 18:00\n[일요일] 휴무\n[휴관일] 공휴일, 매주 일요일",
+      "membership_products": [
+        {
+          "product_name": "요가+소도구필라테스 (주3회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 130000,
+              "dagym_price": 130000,
+              "monthly_price_calc": 130000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 36,
+              "default_price": 290000,
+              "dagym_price": 285000,
+              "monthly_price_calc": 95000
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 72,
+              "default_price": 420000,
+              "dagym_price": 385000,
+              "monthly_price_calc": 64167
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": 144,
+              "default_price": 630000,
+              "dagym_price": 630000,
+              "monthly_price_calc": 52500
+            }
+          ]
+        },
+        {
+          "product_name": "요가+소도구필라테스(주5회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 150000,
+              "dagym_price": 150000,
+              "monthly_price_calc": 150000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 60,
+              "default_price": 320000,
+              "dagym_price": 310000,
+              "monthly_price_calc": 103333
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 120,
+              "default_price": 480000,
+              "dagym_price": 430000,
+              "monthly_price_calc": 71667
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": 240,
+              "default_price": 690000,
+              "dagym_price": 690000,
+              "monthly_price_calc": 57500
+            }
+          ]
+        },
+        {
+          "product_name": "플라잉요가+소도구필라테스+요가(주3회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 12,
+              "default_price": 230000,
+              "dagym_price": 230000,
+              "monthly_price_calc": 230000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 36,
+              "default_price": 440000,
+              "dagym_price": 425000,
+              "monthly_price_calc": 141667
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 72,
+              "default_price": 620000,
+              "dagym_price": 565000,
+              "monthly_price_calc": 94167
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": 144,
+              "default_price": 880000,
+              "dagym_price": 880000,
+              "monthly_price_calc": 73333
+            }
+          ]
+        },
+        {
+          "product_name": "플라잉요가+소도구필라테스+요가(주5회)",
+          "product_type": "period",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 250000,
+              "dagym_price": 250000,
+              "monthly_price_calc": 250000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 60,
+              "default_price": 470000,
+              "dagym_price": 455000,
+              "monthly_price_calc": 151667
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 120,
+              "default_price": 680000,
+              "dagym_price": 620000,
+              "monthly_price_calc": 103333
+            },
+            {
+              "period": 12,
+              "period_unit": "month",
+              "count": 240,
+              "default_price": 940000,
+              "dagym_price": 940000,
+              "monthly_price_calc": 78333
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "요가",
+          "default_price": 20000,
+          "dagym_price": 18000,
+          "entrance_policy": {
+            "period": 1,
+            "periodUnit": "hour",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   },
   {
     "name": "구로항동 에쏘르 번지요가스튜디오",
     "price": 19000,
     "rating": 5.0,
-    "detail_url": "https://www.da-gym.co.kr/detail/66af547801d0e4001dc656e8"
+    "detail_url": "https://www.da-gym.co.kr/detail/66af547801d0e4001dc656e8",
+    "price_unit": "1회",
+    "detail_pricing": {
+      "operating_time_raw": "[평  일] 10:00 ~ 22:30\n[토요일] 휴무\n[일요일] 10:00 ~ 12:00\n[휴관일] 공휴일, 매주 토요일",
+      "membership_products": [
+        {
+          "product_name": "정규수강권",
+          "product_type": "count",
+          "prices": [
+            {
+              "period": 1,
+              "period_unit": "month",
+              "count": 10,
+              "default_price": 300000,
+              "dagym_price": 300000,
+              "monthly_price_calc": 300000
+            },
+            {
+              "period": 3,
+              "period_unit": "month",
+              "count": 20,
+              "default_price": 440000,
+              "dagym_price": 440000,
+              "monthly_price_calc": 146667
+            },
+            {
+              "period": 6,
+              "period_unit": "month",
+              "count": 50,
+              "default_price": 950000,
+              "dagym_price": 950000,
+              "monthly_price_calc": 158333
+            }
+          ]
+        }
+      ],
+      "daily_products": [
+        {
+          "product_name": "원데이 클래스 ",
+          "default_price": 35000,
+          "dagym_price": 30000,
+          "entrance_policy": {
+            "period": 50,
+            "periodUnit": "minute",
+            "limitCount": 1
+          }
+        }
+      ],
+      "schedule_raw": []
+    }
   }
 ]

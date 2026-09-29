@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YoGaHaZa</title>
+<style>
+  :root {
+    --bg: #faf9f7;
+    --card-bg: #ffffff;
+    --text: #1f2320;
+    --muted: #6b7269;
+    --accent: #4a7c59;
+    --border: #e4e0d8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Pretendard, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 32px 20px 16px;
+    text-align: center;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+  }
+  .count {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 16px 20px 48px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card h2 {
+    margin: 0;
+    font-size: 17px;
+  }
+  .price {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .rating {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .card a {
+    margin-top: auto;
+    text-decoration: none;
+    color: #fff;
+    background: var(--accent);
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  .status {
+    text-align: center;
+    color: var(--muted);
+    padding: 24px 0 8px;
+  }
+  .hint {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 0 0 32px;
+  }
+  .filters {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: flex-end;
+  }
+  .filters .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .filters label {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .filters select,
+  .filters input {
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fff;
+    color: var(--text);
+  }
+  .filters input[type="number"] {
+    width: 140px;
+  }
+  #applyBtn {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .card .detail-link {
+    margin-top: auto;
+    text-decoration: none;
+    color: #fff;
+    background: var(--accent);
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .detail-view {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .detail-view h2 {
+    margin: 0 0 4px;
+    font-size: 22px;
+  }
+  .detail-basic {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+  }
+  .detail-basic .price {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 6px;
+  }
+  .detail-basic .rating {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .detail-section {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+  .detail-section h3 {
+    margin: 0 0 12px;
+    font-size: 16px;
+  }
+  .product-block {
+    margin-bottom: 16px;
+  }
+  .product-block:last-child {
+    margin-bottom: 0;
+  }
+  .product-block h4 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  table.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  table.price-table th,
+  table.price-table td {
+    border-bottom: 1px solid var(--border);
+    padding: 6px 8px;
+    text-align: left;
+  }
+  table.price-table th {
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .operating-time {
+    white-space: pre-line;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .schedule-empty {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .source-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .evidence {
+    max-width: 1080px;
+    margin: 40px auto 0;
+    padding: 24px 20px 40px;
+    border-top: 1px solid var(--border);
+  }
+  .evidence h2 {
+    font-size: 18px;
+    margin: 0 0 16px;
+  }
+  .evidence figure {
+    margin: 0 0 20px;
+  }
+  .evidence img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .evidence figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .evidence .limitation,
+  .evidence .source {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 4px 0;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>YoGaHaZa</h1>
+    <p class="count" id="count"></p>
+  </header>
+
+  <div class="filters">
+    <div class="field">
+      <label for="unitSelect">이용 방식</label>
+      <select id="unitSelect">
+        <option value="all">전체</option>
+        <option value="월">월 이용권</option>
+        <option value="1회">1회권</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="budgetInput">내 예산(원)</label>
+      <input type="number" id="budgetInput" min="0" placeholder="예: 50000" />
+    </div>
+    <div class="field">
+      <label for="ratingSelect">최소 별점</label>
+      <select id="ratingSelect">
+        <option value="">선택 안 함</option>
+        <option value="1">1점 이상</option>
+        <option value="2">2점 이상</option>
+        <option value="3">3점 이상</option>
+        <option value="4">4점 이상</option>
+        <option value="5">5점 이상</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="weeklyVisitsSelect">주당 이용 횟수</label>
+      <select id="weeklyVisitsSelect">
+        <option value="">전체</option>
+        <option value="2">주2회</option>
+        <option value="3">주3회</option>
+        <option value="4">주4회</option>
+        <option value="5">주5회</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="perVisitMaxInput">1회당 최대 금액(원)</label>
+      <input type="number" id="perVisitMaxInput" min="0" placeholder="예: 15000" />
+    </div>
+    <div class="field">
+      <button id="applyBtn">내 조건으로 찾기</button>
+    </div>
+  </div>
+
+  <main>
+    <div id="grid" class="grid"></div>
+    <div id="detailView" class="detail-view" style="display:none"></div>
+  </main>
+
+  <section class="evidence">
+    <h2>근거</h2>
+    <figure>
+      <img src="charts/by_category.png" alt="그림 2" />
+      <figcaption>그림 2 : 별점이 높을수록 가격이 높다고 할 수 없다 - 회당 가격에서 별점 5.0 평균은 약 18,577원이고, 별점 4.5는 63,333원이다</figcaption>
+    </figure>
+    <p class="limitation">가격이 회당과 월 단위로 나뉘어 있고 별점별 표본 수가 적어, 별점과 가격의 관계를 일반화하기 어렵다</p>
+    <p class="source">다짐 서울 요가 검색 결과 · 2026-09-28 수집 · 24개</p>
+  </section>
+
+  <script>
+    let allItems = [];
+
+    function unitMatches(item, unit) {
+      return unit === 'all' || item.price_unit === unit;
+    }
+
+    function applyFilters() {
+      const unit = document.getElementById('unitSelect').value;
+      const budgetRaw = document.getElementById('budgetInput').value;
+      const ratingRaw = document.getElementById('ratingSelect').value;
+      const weeklyVisitsRaw = document.getElementById('weeklyVisitsSelect').value;
+      const perVisitMaxRaw = document.getElementById('perVisitMaxInput').value;
+
+      const budget = budgetRaw === '' ? null : Number(budgetRaw);
+      const minRating = ratingRaw === '' ? null : Number(ratingRaw);
+      const weeklyVisits = weeklyVisitsRaw === '' ? null : Number(weeklyVisitsRaw);
+      const perVisitMax = perVisitMaxRaw === '' ? null : Number(perVisitMaxRaw);
+
+      const filtered = allItems
+        .filter(item => unitMatches(item, unit))
+        .filter(item => budget === null || item.price <= budget)
+        .filter(item => minRating === null || item.rating >= minRating)
+        .filter(item => weeklyVisits === null || itemHasWeeklyVisits(item, weeklyVisits))
+        .filter(item => perVisitMax === null || itemHasPerVisitUnder(item, perVisitMax))
+        .sort((a, b) => a.price - b.price);
+
+      render(filtered, { unit, budget, minRating });
+    }
+
+    function buildHint(unit, budget, minRating) {
+      const unitMatched = allItems.filter(item => unitMatches(item, unit));
+
+      const ratingOnly = unitMatched.filter(item => minRating === null || item.rating >= minRating);
+      const cheapest = ratingOnly.length
+        ? ratingOnly.reduce((min, item) => item.price < min.price ? item : min)
+        : null;
+
+      const budgetOnly = unitMatched.filter(item => budget === null || item.price <= budget);
+      let lowerRatingValue = null;
+      let lowerRatingCount = null;
+      if (minRating !== null && minRating > 1) {
+        lowerRatingValue = minRating - 1;
+        lowerRatingCount = budgetOnly.filter(item => item.rating >= lowerRatingValue).length;
+      }
+
+      const parts = [];
+      if (cheapest) {
+        parts.push(`예산만 올리면 가장 싼 후보는 ₩${cheapest.price.toLocaleString()} / ${cheapest.price_unit}`);
+      } else {
+        parts.push(`이 조건에서는 예산을 올려도 후보가 없음`);
+      }
+      if (lowerRatingValue !== null) {
+        parts.push(`최소 별점을 ${lowerRatingValue}점으로 낮추면 ${lowerRatingCount}개가 됨`);
+      }
+      return parts.join(', ') + '.';
+    }
+
+    function render(items, ctx) {
+      const grid = document.getElementById('grid');
+      const countEl = document.getElementById('count');
+
+      countEl.textContent = `내 조건에 맞는 ${items.length}개 / 전체 ${allItems.length}개`;
+
+      if (items.length === 0) {
+        const hint = buildHint(ctx.unit, ctx.budget, ctx.minRating);
+        grid.innerHTML = `
+          <p class="status">조건에 맞는 요가 시설이 없습니다.</p>
+          <p class="hint">${hint}</p>
+        `;
+        return;
+      }
+
+      grid.innerHTML = items.map(item => `
+        <div class="card">
+          <h2>${item.name}</h2>
+          <div class="price">₩${item.price.toLocaleString()} / ${item.price_unit}</div>
+          <div class="rating">별점 ${item.rating}</div>
+          <a href="#" class="detail-link" data-url="${item.detail_url}">상세보기</a>
+        </div>
+      `).join('');
+    }
+
+    const PERIOD_UNIT_LABEL = { month: '개월', day: '일', week: '주', year: '년', hour: '시간' };
+
+    function formatPeriod(period, unit) {
+      if (period === null || period === undefined) return '-';
+      const label = PERIOD_UNIT_LABEL[unit] || unit || '';
+      return `${period}${label}`;
+    }
+
+    function formatPrice(value) {
+      return (value === null || value === undefined) ? '-' : `₩${value.toLocaleString()}`;
+    }
+
+    const MONTH_TO_WEEKS = { 1: 4, 3: 12, 6: 24, 12: 48 };
+
+    function weeklyVisitsFromName(productName) {
+      const match = productName.match(/주\s*(\d+)\s*(?:회|일)/);
+      return match ? Number(match[1]) : null;
+    }
+
+    function calcPerVisit(product, price) {
+      if (price.default_price === null || price.default_price === undefined) {
+        return null;
+      }
+
+      if (price.count !== null && price.count !== undefined) {
+        return Math.round(price.default_price / price.count);
+      }
+
+      const weeklyVisits = weeklyVisitsFromName(product.product_name);
+      const weeks = price.period_unit === 'month' ? MONTH_TO_WEEKS[price.period] : null;
+
+      if (weeklyVisits === null || weeks === null || weeks === undefined) {
+        return null;
+      }
+
+      return Math.round(price.default_price / (weeklyVisits * weeks));
+    }
+
+    function formatPerVisit(product, price) {
+      const perVisit = calcPerVisit(product, price);
+      return perVisit === null ? '계산 불가' : `1회당 약 ₩${perVisit.toLocaleString()}`;
+    }
+
+    function itemHasWeeklyVisits(item, target) {
+      if (!item.detail_pricing) return false;
+      return item.detail_pricing.membership_products.some(
+        p => weeklyVisitsFromName(p.product_name) === target
+      );
+    }
+
+    function itemHasPerVisitUnder(item, maxPrice) {
+      if (!item.detail_pricing) return false;
+      return item.detail_pricing.membership_products.some(p =>
+        p.prices.some(price => {
+          const perVisit = calcPerVisit(p, price);
+          return perVisit !== null && perVisit <= maxPrice;
+        })
+      );
+    }
+
+    function renderMembershipProducts(products) {
+      return products.map(product => `
+        <div class="product-block">
+          <h4>${product.product_name}</h4>
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>기간</th>
+                <th>정상가</th>
+                <th>1회당 약</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${product.prices.map(p => `
+                <tr>
+                  <td>${formatPeriod(p.period, p.period_unit)}</td>
+                  <td>${formatPrice(p.default_price)}</td>
+                  <td>${formatPerVisit(product, p)}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `).join('');
+    }
+
+    function renderDailyProducts(dailyProducts) {
+      return dailyProducts.map(dp => `
+        <div class="product-block">
+          <h4>${dp.product_name}</h4>
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>정상가</th>
+                <th>실제 가격</th>
+                <th>이용 조건</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>${formatPrice(dp.default_price)}</td>
+                <td>${formatPrice(dp.dagym_price)}</td>
+                <td>${dp.entrance_policy ? `${formatPeriod(dp.entrance_policy.period, dp.entrance_policy.periodUnit)}당 ${dp.entrance_policy.limitCount}회` : '-'}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      `).join('');
+    }
+
+    function renderScheduleEntry(entry) {
+      if (typeof entry !== 'object' || entry === null) {
+        return `<li>${entry}</li>`;
+      }
+      const fields = Object.entries(entry).map(([k, v]) => `${k}: ${v}`).join(' · ');
+      return `<li>${fields}</li>`;
+    }
+
+    function renderDetail(item) {
+      const dp = item.detail_pricing;
+
+      let extraSections = '';
+      if (dp) {
+        if (dp.membership_products && dp.membership_products.length > 0) {
+          extraSections += `
+            <div class="detail-section">
+              <h3>이용권 가격</h3>
+              ${renderMembershipProducts(dp.membership_products)}
+            </div>
+          `;
+        }
+        if (dp.daily_products && dp.daily_products.length > 0) {
+          extraSections += `
+            <div class="detail-section">
+              <h3>일일권</h3>
+              ${renderDailyProducts(dp.daily_products)}
+            </div>
+          `;
+        }
+        if (dp.operating_time_raw) {
+          extraSections += `
+            <div class="detail-section">
+              <h3>운영시간</h3>
+              <div class="operating-time">${dp.operating_time_raw}</div>
+            </div>
+          `;
+        }
+        if (dp.schedule_raw !== undefined) {
+          extraSections += `
+            <div class="detail-section">
+              <h3>시간표</h3>
+              ${dp.schedule_raw && dp.schedule_raw.length > 0
+                ? `<ul>${dp.schedule_raw.map(renderScheduleEntry).join('')}</ul>`
+                : `<p class="schedule-empty">등록된 시간표 정보가 없습니다.</p>`}
+            </div>
+          `;
+        }
+      }
+
+      const detailView = document.getElementById('detailView');
+      detailView.innerHTML = `
+        <a href="#" class="back-link" id="backToListBtn">← 목록으로</a>
+        <div class="detail-basic">
+          <h2>${item.name}</h2>
+          <div class="price">₩${item.price.toLocaleString()} / ${item.price_unit}</div>
+          <div class="rating">별점 ${item.rating}</div>
+        </div>
+        ${extraSections}
+        <a href="${item.detail_url}" target="_blank" rel="noopener noreferrer" class="source-link">정보 출처 보기</a>
+      `;
+
+      document.getElementById('backToListBtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        showList();
+      });
+    }
+
+    function showDetail(detailUrl) {
+      const item = allItems.find(x => x.detail_url === detailUrl);
+      if (!item) return;
+      renderDetail(item);
+      document.querySelector('.filters').style.display = 'none';
+      document.getElementById('grid').style.display = 'none';
+      document.getElementById('detailView').style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+
+    function showList() {
+      document.getElementById('detailView').style.display = 'none';
+      document.querySelector('.filters').style.display = 'flex';
+      document.getElementById('grid').style.display = 'grid';
+    }
+
+    async function main() {
+      const grid = document.getElementById('grid');
+      const countEl = document.getElementById('count');
+      try {
+        const res = await fetch('data/data.json');
+        allItems = await res.json();
+
+        document.getElementById('applyBtn').addEventListener('click', applyFilters);
+
+        grid.addEventListener('click', (e) => {
+          const link = e.target.closest('.detail-link');
+          if (link) {
+            e.preventDefault();
+            showDetail(link.dataset.url);
+          }
+        });
+
+        render(allItems.slice().sort((a, b) => a.price - b.price), { unit: 'all', budget: null, minRating: null });
+      } catch (err) {
+        grid.innerHTML = '';
+        countEl.textContent = '';
+        grid.parentElement.insertAdjacentHTML('beforeend', '<p class="status">데이터를 불러오지 못했습니다.</p>');
+        console.error(err);
+      }
+    }
+    main();
+  </script>
+</body>
+</html>
