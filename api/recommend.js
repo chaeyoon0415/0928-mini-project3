@@ -4,12 +4,16 @@
 // Model + REST shape confirmed against the official Gemini API docs
 // (ai.google.dev/gemini-api/docs/models, ai.google.dev/api/generate-content):
 // generateContent remains fully supported and is used here for a single-turn
-// text response. Model: gemini-3.8-flash (current stable Flash model, GA 2026-09-02).
+// text response. Model: gemini-3.5-flash (temporarily downgraded from
+// gemini-3.8-flash after its free-tier daily quota was exhausted during
+// testing; quota is tracked separately per model, so 3.5-flash has its own
+// allowance. See the migration guide at ai.google.dev/gemini-api/docs/models
+// if switching back later.
 
-const GEMINI_MODEL = 'gemini-3.8-flash';
+const GEMINI_MODEL = 'gemini-3.5-flash';
 const GEMINI_ENDPOINT = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 const MAX_CANDIDATES = 5;
-const REQUEST_TIMEOUT_MS = 15000;
+const REQUEST_TIMEOUT_MS = 25000;
 
 function buildPrompt(conditions, candidates) {
   const conditionLines = Object.entries(conditions || {})
@@ -96,15 +100,22 @@ module.exports = async (req, res) => {
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: systemInstruction }] },
         contents: [{ parts: [{ text: userInput }] }],
-        // gemini-3.8-flash spends part of its output budget on internal
-        // "thinking" tokens before the visible answer, so this needs real
-        // headroom or the reply gets cut off before NAME:/REASON: appears.
-        generationConfig: { maxOutputTokens: 1024 },
+        // This model spends part of its output budget on internal "thinking"
+        // tokens before the visible answer, so this needs real headroom or
+        // the reply gets cut off before NAME:/REASON: appears.
+        generationConfig: { maxOutputTokens: 2048 },
       }),
       signal: controller.signal,
     });
 
     if (!geminiRes.ok) {
+      const errorBody = await geminiRes.text();
+      // TEMP DIAGNOSTIC LOGGING (server-side only, no key/secrets included)
+      console.error('[recommend] Gemini non-OK response', {
+        status: geminiRes.status,
+        statusText: geminiRes.statusText,
+        body: errorBody,
+      });
       res.status(200).json({ ok: false, reason: 'ai_error' });
       return;
     }
@@ -113,6 +124,11 @@ module.exports = async (req, res) => {
     const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
 
     if (!text) {
+      // TEMP DIAGNOSTIC LOGGING (server-side only, no key/secrets included)
+      console.error('[recommend] Gemini OK but no text in response', {
+        status: geminiRes.status,
+        body: JSON.stringify(data),
+      });
       res.status(200).json({ ok: false, reason: 'ai_error' });
       return;
     }
@@ -131,6 +147,11 @@ module.exports = async (req, res) => {
 
     res.status(200).json({ ok: true, name: parsed.name, reason: parsed.reason });
   } catch (err) {
+    // TEMP DIAGNOSTIC LOGGING (server-side only, no key/secrets included)
+    console.error('[recommend] fetch threw', {
+      name: err?.name,
+      message: err?.message,
+    });
     res.status(200).json({ ok: false, reason: 'ai_error' });
   } finally {
     clearTimeout(timeout);
