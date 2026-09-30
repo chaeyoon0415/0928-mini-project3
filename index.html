@@ -967,10 +967,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
 
     function itemHasWeeklyVisits(item, target) {
-      if (!item.detail_pricing) return false;
-      return item.detail_pricing.membership_products.some(
-        p => weeklyVisitsFromName(p.product_name) === target
-      );
+      if (!item.detail_pricing) return true;
+      const weeklyValues = item.detail_pricing.membership_products
+        .map(p => weeklyVisitsFromName(p.product_name))
+        .filter(v => v !== null);
+      if (weeklyValues.length === 0) return true;
+      return weeklyValues.includes(target);
     }
 
     function itemHasPerVisitUnder(item, maxPrice) {
