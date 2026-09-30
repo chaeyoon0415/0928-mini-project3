@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P374PG9');</script>
+<!-- End Google Tag Manager -->
 <title>YoGaHaZa</title>
 <link rel="stylesheet" as="style" crossorigin
   href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.css" />
@@ -144,7 +151,8 @@
   }
   .filter-title {
     margin: 0 0 24px;
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: 800;
   }
   .filter-grid {
     display: flex;
@@ -210,12 +218,13 @@
     background: var(--accent);
     color: #fff;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     font-family: inherit;
     padding: 0 20px;
     height: 40px;
     cursor: pointer;
     white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(91, 124, 95, 0.25);
   }
   #applyBtn:hover { background: #4d6b51; }
 
@@ -223,9 +232,14 @@
   .ai-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
     border-radius: 20px;
     padding: 24px 32px;
-    margin-top: 20px;
+    margin-top: 24px;
+  }
+  .ai-card--locked {
+    opacity: 0.65;
+    border-left-color: var(--border);
   }
   .ai-card-header {
     display: flex;
@@ -237,6 +251,12 @@
   .ai-card-title {
     margin: 0;
     font-size: 16px;
+    font-weight: 600;
+  }
+  .ai-card-desc {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: var(--muted);
   }
   #aiRecommendBtn {
     border: none;
@@ -244,12 +264,13 @@
     background: var(--accent);
     color: #fff;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     font-family: inherit;
     padding: 0 20px;
     height: 40px;
     cursor: pointer;
     white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(91, 124, 95, 0.25);
   }
   #aiRecommendBtn:hover { background: #4d6b51; }
   #aiRecommendBtn:disabled {
@@ -269,6 +290,22 @@
     background: var(--bg-ivory);
     color: var(--muted);
   }
+  .ai-fact-line {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .ai-cond-list {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .ai-compare {
+    margin: 8px 0 0;
+    font-size: 13px;
+    font-weight: 600;
+  }
 
   /* ---------- Results ---------- */
   .results {
@@ -287,8 +324,13 @@
   .results-header h2 {
     margin: 0;
     font-size: 20px;
+    font-weight: 700;
   }
   .accent-text { color: var(--accent); }
+  .results-header h2 .accent-text {
+    font-size: 22px;
+    font-weight: 800;
+  }
   .sort-field {
     display: flex;
     align-items: center;
@@ -304,6 +346,23 @@
     font-family: inherit;
     background: #fff;
     color: var(--text);
+  }
+  .filter-summary-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 16px;
+  }
+  .filter-pill {
+    display: inline-flex;
+    align-items: center;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
   }
   .info-chip {
     display: inline-flex;
@@ -399,7 +458,12 @@
   .card .price-note {
     font-size: 12px;
     color: var(--muted);
-    margin-bottom: 14px;
+    margin-bottom: 4px;
+  }
+  .card .location {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 10px;
   }
   .card .rating {
     font-size: 14px;
@@ -408,8 +472,8 @@
   }
   .card .card-link {
     font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
+    font-weight: 500;
+    color: var(--muted);
   }
 
   .status {
@@ -451,12 +515,13 @@
   .back-link {
     display: inline-block;
     margin-bottom: 16px;
-    color: var(--accent);
+    color: var(--muted);
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
     font-weight: 500;
   }
+  .back-link:hover { color: var(--accent); }
   .detail-view h2 {
     margin: 0 0 4px;
     font-size: 22px;
@@ -525,11 +590,12 @@
   .source-link {
     display: inline-block;
     margin-top: 8px;
-    color: var(--accent);
-    text-decoration: none;
+    color: var(--muted);
+    text-decoration: underline;
     font-size: 14px;
     font-weight: 500;
   }
+  .source-link:hover { color: var(--accent); }
 
   /* ---------- Evidence ---------- */
   .evidence {
@@ -582,6 +648,10 @@
 </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P374PG9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="topbar">
     <div class="topbar-inner">
       <div class="logo" id="logoBtn">YoGaHaZa</div>
@@ -653,11 +723,12 @@
       </div>
     </div>
 
-    <div class="ai-card">
+    <div class="ai-card ai-card--locked" id="aiCard">
       <div class="ai-card-header">
-        <h3 class="ai-card-title">AI 추천</h3>
-        <button type="button" id="aiRecommendBtn">이 조건으로 추천받기</button>
+        <h3 class="ai-card-title">남은 공간 중 어디가 더 잘 맞을까요?</h3>
+        <button type="button" id="aiRecommendBtn" disabled>이 후보들 중 추천받기</button>
       </div>
+      <p class="ai-card-desc" id="aiCardDesc">먼저 조건 검색을 하면, 남은 후보들을 가격과 평점 기준으로 비교해드려요.</p>
       <p id="aiResultText" class="ai-result-text" style="display:none"></p>
     </div>
   </section>
@@ -674,6 +745,7 @@
         </select>
       </div>
     </div>
+    <div id="filterSummaryPills" class="filter-summary-pills" style="display:none"></div>
     <p class="info-chip">ⓘ 표시 가격은 각 시설에서 확인된 이용권 중 최저가 기준입니다.</p>
 
     <div id="grid" class="grid"></div>
@@ -715,6 +787,8 @@
     let visibleCount = 6;
     const PAGE_SIZE = 6;
     let selectedUnit = 'all';
+    let hasSearched = false;
+    let lastFilterCtx = null;
 
     let favorites = new Set(JSON.parse(localStorage.getItem('yogahaza_favorites') || '[]'));
 
@@ -758,7 +832,8 @@
         .filter(item => perVisitMax === null || itemHasPerVisitUnder(item, perVisitMax))
         .sort(getSortComparator(sortMode));
 
-      render(filtered, { unit, budget, minRating });
+      render(filtered, { unit, budget, minRating, weeklyVisits, perVisitMax });
+      updateAiCardState();
     }
 
     function buildHint(unit, budget, minRating) {
@@ -807,6 +882,7 @@
           <h3>${item.name}</h3>
           <div class="price">₩${item.price.toLocaleString()}부터</div>
           <div class="price-note">${item.price_unit} 이용 기준</div>
+          ${item.location ? `<div class="location">${item.location}</div>` : ''}
           <div class="rating">★ ${item.rating}</div>
           <span class="card-link">공간 자세히 보기 →</span>
         </div>
@@ -831,6 +907,8 @@
       currentFiltered = items;
       visibleCount = PAGE_SIZE;
       countNum.textContent = `${items.length}곳`;
+      lastFilterCtx = ctx;
+      renderFilterSummary(ctx);
 
       if (items.length === 0) {
         const hint = buildHint(ctx.unit, ctx.budget, ctx.minRating);
@@ -1023,6 +1101,7 @@
     function hideAllViews() {
       document.querySelector('.filter-section').style.display = 'none';
       document.querySelector('.results-header').style.display = 'none';
+      document.getElementById('filterSummaryPills').style.display = 'none';
       document.querySelector('.info-chip').style.display = 'none';
       document.getElementById('grid').style.display = 'none';
       document.getElementById('moreWrap').style.display = 'none';
@@ -1047,6 +1126,7 @@
       document.querySelector('.results-header').style.display = 'flex';
       document.querySelector('.info-chip').style.display = 'inline-flex';
       document.getElementById('grid').style.display = 'grid';
+      if (lastFilterCtx) renderFilterSummary(lastFilterCtx);
       renderCards();
       window.scrollTo(0, 0);
     }
@@ -1143,6 +1223,101 @@
       return '전체';
     }
 
+    function unitPillLabel(unit) {
+      if (unit === '1회') return '1회권';
+      if (unit === '월') return '정기권';
+      return '전체 이용권';
+    }
+
+    // 실제로 적용된 검색 조건만 pill로 요약해 보여준다 (새 필터 기능이 아니라 현재 상태 안내용).
+    function renderFilterSummary(ctx) {
+      const container = document.getElementById('filterSummaryPills');
+      if (!container) return;
+
+      const optionalTags = [];
+      if (ctx.budget !== null && ctx.budget !== undefined) {
+        optionalTags.push(`예산 ${ctx.budget.toLocaleString()}원 이하`);
+      }
+      if (ctx.minRating !== null && ctx.minRating !== undefined) {
+        optionalTags.push(`평점 ${ctx.minRating}점 이상`);
+      }
+      if (ctx.weeklyVisits !== null && ctx.weeklyVisits !== undefined) {
+        optionalTags.push(`주 ${ctx.weeklyVisits}회`);
+      }
+      if (ctx.perVisitMax !== null && ctx.perVisitMax !== undefined) {
+        optionalTags.push(`1회당 ${ctx.perVisitMax.toLocaleString()}원 이하`);
+      }
+
+      const hasAnyCondition = optionalTags.length > 0 || (ctx.unit && ctx.unit !== 'all');
+      if (!hasSearched || !hasAnyCondition) {
+        container.style.display = 'none';
+        container.innerHTML = '';
+        return;
+      }
+
+      const tags = [unitPillLabel(ctx.unit), ...optionalTags];
+      container.innerHTML = tags.map(t => `<span class="filter-pill">${escapeHtml(t)}</span>`).join('');
+      container.style.display = 'flex';
+    }
+
+    function readActiveConditions() {
+      const budgetRaw = document.getElementById('budgetInput').value;
+      const ratingRaw = document.getElementById('ratingSelect').value;
+      const weeklyVisitsRaw = document.getElementById('weeklyVisitsSelect').value;
+      const perVisitMaxRaw = document.getElementById('perVisitMaxInput').value;
+
+      return {
+        unit: selectedUnit,
+        budget: budgetRaw === '' ? null : Number(budgetRaw),
+        minRating: ratingRaw === '' ? null : Number(ratingRaw),
+        weeklyVisits: weeklyVisitsRaw === '' ? null : Number(weeklyVisitsRaw),
+        perVisitMax: perVisitMaxRaw === '' ? null : Number(perVisitMaxRaw),
+      };
+    }
+
+    // 추천 근거는 서버 응답 텍스트가 아니라, 카드에 실제로 표시되는 값(가격/가격기준/평점/위치)과
+    // 사용자가 입력한 조건을 그대로 조합해 만든다 (데이터에 없는 내용은 만들지 않기 위함).
+    function buildRecommendationReason(item, pool, conds) {
+      const factParts = [
+        `₩${item.price.toLocaleString()}부터`,
+        `${item.price_unit} 이용 기준`,
+        `★${item.rating}`,
+      ];
+      if (item.location) factParts.push(item.location);
+
+      const condLines = [];
+      if (conds.unit !== 'all') {
+        condLines.push(`✓ 이용 방식 ${getUnitLabel(conds.unit)} → 실제 ${item.price_unit} 이용`);
+      }
+      if (conds.budget !== null) {
+        condLines.push(`✓ 예산 ${conds.budget.toLocaleString()}원 이하 → 실제 ${item.price.toLocaleString()}원`);
+      }
+      if (conds.minRating !== null) {
+        condLines.push(`✓ 최소 평점 ${conds.minRating} 이상 → 실제 평점 ${item.rating}`);
+      }
+      if (conds.weeklyVisits !== null) {
+        condLines.push(`✓ 주${conds.weeklyVisits}회 이용 조건 충족`);
+      }
+      if (conds.perVisitMax !== null) {
+        condLines.push(`✓ 1회당 ${conds.perVisitMax.toLocaleString()}원 이하 조건 충족`);
+      }
+
+      const comparisonLines = [];
+      const samePool = pool.filter(c => c.price_unit === item.price_unit);
+      if (samePool.length >= 2) {
+        const minPrice = Math.min(...samePool.map(c => c.price));
+        const maxRating = Math.max(...samePool.map(c => c.rating));
+        if (item.price === minPrice) {
+          comparisonLines.push(`조건에 맞는 ${item.price_unit} 이용 ${samePool.length}곳 중 가격이 가장 낮아요.`);
+        }
+        if (item.rating === maxRating) {
+          comparisonLines.push(`조건에 맞는 ${item.price_unit} 이용 ${samePool.length}곳 중 평점이 가장 높아요.`);
+        }
+      }
+
+      return { factLine: factParts.join(' · '), condLines, comparisonLines };
+    }
+
     function showAiMessage(message) {
       const resultEl = document.getElementById('aiResultText');
       resultEl.className = 'ai-result-text is-message';
@@ -1150,18 +1325,34 @@
       resultEl.style.display = 'block';
     }
 
+    function updateAiCardState() {
+      const aiCard = document.getElementById('aiCard');
+      const btn = document.getElementById('aiRecommendBtn');
+      const desc = document.getElementById('aiCardDesc');
+
+      if (!hasSearched) {
+        aiCard.classList.add('ai-card--locked');
+        btn.disabled = true;
+        desc.textContent = '먼저 조건 검색을 하면, 남은 후보들을 가격과 평점 기준으로 비교해드려요.';
+        return;
+      }
+
+      aiCard.classList.remove('ai-card--locked');
+      desc.textContent = '조건에 맞는 공간을 가격과 평점을 기준으로 비교해드려요.';
+      btn.disabled = currentFiltered.length === 0;
+    }
+
     async function requestAiRecommendation() {
       const btn = document.getElementById('aiRecommendBtn');
       const resultEl = document.getElementById('aiResultText');
 
-      if (currentFiltered.length === 0) {
+      if (!hasSearched || currentFiltered.length === 0) {
         aiRecommendedUrl = null;
         showAiMessage('조건에 맞는 요가 시설이 없습니다.');
         return;
       }
 
-      const budgetRaw = document.getElementById('budgetInput').value;
-      const budget = budgetRaw === '' ? null : Number(budgetRaw);
+      const conds = readActiveConditions();
 
       const top5 = currentFiltered
         .slice()
@@ -1178,7 +1369,7 @@
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            conditions: { '이용 방식': getUnitLabel(selectedUnit), '내 예산(원)': budget },
+            conditions: { '이용 방식': getUnitLabel(conds.unit), '내 예산(원)': conds.budget },
             candidates: top5,
           }),
         });
@@ -1192,32 +1383,62 @@
           } else {
             showAiMessage('잠시 뒤 다시 눌러 주세요');
           }
+          const ALLOWED_RESULT_STATUS = ['ok', 'no_candidates', 'invalid_name', 'parse_error', 'ai_error'];
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'get_ai_recommendation_result',
+            candidate_count: top5.length,
+            result_status: (data && ALLOWED_RESULT_STATUS.includes(data.reason)) ? data.reason : 'ai_error',
+          });
           renderCards();
           return;
         }
 
-        const matchedItem = currentFiltered.find(item => item.name === data.name)
-          || allItems.find(item => item.name === data.name);
+        const matchedItem = currentFiltered.find(item => item.name === data.name);
 
         if (!matchedItem) {
           aiRecommendedUrl = null;
           showAiMessage('추천을 확인하지 못했습니다');
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'get_ai_recommendation_result',
+            candidate_count: top5.length,
+            result_status: 'parse_error',
+          });
           renderCards();
           return;
         }
 
         aiRecommendedUrl = matchedItem.detail_url;
+        const { factLine, condLines, comparisonLines } = buildRecommendationReason(matchedItem, currentFiltered, conds);
         resultEl.className = 'ai-result-text';
-        resultEl.innerHTML = `<strong>${escapeHtml(matchedItem.name)}</strong> 추천<br>${escapeHtml(data.reason).replace(/\n/g, '<br>')}`;
+        resultEl.innerHTML = `
+          <strong>${escapeHtml(matchedItem.name)}</strong> 추천
+          <div class="ai-fact-line">${escapeHtml(factLine)}</div>
+          ${condLines.length ? `<ul class="ai-cond-list">${condLines.map(l => `<li>${escapeHtml(l)}</li>`).join('')}</ul>` : ''}
+          ${comparisonLines.length ? `<p class="ai-compare">${comparisonLines.map(escapeHtml).join(' ')}</p>` : ''}
+        `;
         resultEl.style.display = 'block';
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'get_ai_recommendation_result',
+          candidate_count: top5.length,
+          result_status: 'ok',
+        });
         renderCards();
       } catch (err) {
         aiRecommendedUrl = null;
         showAiMessage('잠시 뒤 다시 눌러 주세요');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'get_ai_recommendation_result',
+          candidate_count: top5.length,
+          result_status: 'ai_error',
+        });
         renderCards();
       } finally {
-        btn.disabled = false;
-        btn.textContent = '이 조건으로 추천받기';
+        btn.textContent = '이 후보들 중 추천받기';
+        updateAiCardState();
       }
     }
 
@@ -1228,9 +1449,20 @@
         allItems = await res.json();
 
         document.getElementById('applyBtn').addEventListener('click', () => {
+          hasSearched = true;
           aiRecommendedUrl = null;
           document.getElementById('aiResultText').style.display = 'none';
           applyFilters();
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'apply_filter',
+            price_unit: lastFilterCtx.unit === 'all' ? '전체' : lastFilterCtx.unit,
+            budget_krw: lastFilterCtx.budget ?? '없음',
+            min_rating: lastFilterCtx.minRating ?? '없음',
+            weekly_visits: lastFilterCtx.weeklyVisits ?? '없음',
+            per_visit_max_krw: lastFilterCtx.perVisitMax ?? '없음',
+            result_count: currentFiltered.length,
+          });
         });
         document.getElementById('sortSelect').addEventListener('change', applyFilters);
         document.getElementById('aiRecommendBtn').addEventListener('click', requestAiRecommendation);
@@ -1264,7 +1496,20 @@
             }
             const card = e.target.closest('.card');
             if (card) {
-              showDetail(card.dataset.url);
+              const url = card.dataset.url;
+              const item = allItems.find(x => x.detail_url === url);
+              if (item && !isFavoritesGrid) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ ecommerce: null });
+                window.dataLayer.push({
+                  event: 'select_item',
+                  ecommerce: {
+                    item_list_name: aiRecommendedUrl === url ? 'ai_recommendation_results' : 'filter_results',
+                    items: [{ item_name: item.name, price: item.price }],
+                  },
+                });
+              }
+              showDetail(url);
             }
           });
         }
@@ -1292,6 +1537,7 @@
         });
 
         render(allItems.slice().sort((a, b) => a.price - b.price), { unit: 'all', budget: null, minRating: null });
+        updateAiCardState();
       } catch (err) {
         grid.innerHTML = '<p class="status">데이터를 불러오지 못했습니다.</p>';
         console.error(err);
